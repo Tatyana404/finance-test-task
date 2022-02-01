@@ -1,3 +1,5 @@
+import Finance from './page/Finance'
+
 export default function App () {
-  return <div>test</div>
+  return <Finance />
 }
