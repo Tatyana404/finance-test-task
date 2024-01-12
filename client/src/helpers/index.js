@@ -1,17 +1,18 @@
-import style from './../Components/FinanceTable/styles.module.css'
+import style from "./../components/FinanceTable/styles.module.css";
 
-export const styleTickers = value => {
-  if (['FB'].includes(value)) {
-    return style.blue
-  } else if (['TSLA'].includes(value)) {
-    return style.red
-  } else if (['AMZN'].includes(value)) {
-    return style.orange
-  } else if (['MSFT'].includes(value)) {
-    return style.gray
-  } else if (['GOOGL'].includes(value)) {
-    return style.bright_red
-  } else {
-    return style.bright_gray
+export const backgroundTicker = (value) => {
+  switch (true) {
+    case ["FB"].includes(value):
+      return style.blue;
+    case ["TSLA"].includes(value):
+      return style.red;
+    case ["AMZN"].includes(value):
+      return style.orange;
+    case ["MSFT"].includes(value):
+      return style.gray;
+    case ["GOOGL"].includes(value):
+      return style.bright_red;
+    default:
+      return style.bright_gray;
   }
-}
+};

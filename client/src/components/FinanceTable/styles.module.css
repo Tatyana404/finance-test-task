@@ -1,0 +1,36 @@
+.table {
+  border-collapse: collapse;
+}
+
+.tbody {
+  background: #ffffff;
+}
+
+.tr > td {
+  border-bottom: 2px solid #e8eaed;
+  padding: 15px;
+}
+
+.blue {
+  background: #4267b2;
+}
+
+.red {
+  background: #e31937;
+}
+
+.orange {
+  background: #c26c03;
+}
+
+.gray {
+  background: #737373;
+}
+
+.bright_red {
+  background: #ed161e;
+}
+
+.bright_gray {
+  background: #666666;
+}

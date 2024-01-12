@@ -1,1 +1,1 @@
-export const getTickers = state => state.tickers.data
+export const getTickers = (state) => state.tickers.data;

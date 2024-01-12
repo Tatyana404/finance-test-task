@@ -1,5 +1,5 @@
-import FinanceTable from '../../Components/FinanceTable'
+import FinanceTable from "../../components/FinanceTable";
 
-export default function Finance () {
-  return <FinanceTable />
+export default function Finance() {
+  return <FinanceTable />;
 }

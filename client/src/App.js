@@ -1,5 +1,5 @@
-import Finance from './page/Finance'
+import Finance from "./page/Finance";
 
-export default function App () {
-  return <Finance />
+export default function App() {
+  return <Finance />;
 }
