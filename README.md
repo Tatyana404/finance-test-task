@@ -1,7 +1,3 @@
-In this project, I use the Redux Toolkit state manager.
-
-I implemented sorting by price and displaying color for each label according to the company.
-
 ## Running the local service
 
 1. Open a new bash shell
