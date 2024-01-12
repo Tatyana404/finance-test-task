@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useEffect } from "react";
 import { setTickers } from "../../store/tickersSlice";
 import { getTickers } from "../../store/selector";
+import FinanceThead from "./FinanceThead";
 import FinanceItem from "./FinanceItem";
 import style from "./styles.module.css";
 
@@ -15,7 +16,12 @@ export default function FinanceTable() {
 
   useEffect(() => {
     socket.emit("start");
-    socket.on("ticker", (data) => dispatch(setTickers(data)));
+
+    const dispatchTickers = (data) => dispatch(setTickers(data));
+
+    socket.on("ticker", dispatchTickers);
+
+    return () => socket.off("ticker", dispatchTickers);
   }, [dispatch]);
 
   const sortTickers = tickers.slice().sort((a, b) => b.price - a.price);
@@ -23,6 +29,8 @@ export default function FinanceTable() {
   return (
     <div>
       <table className={style.table}>
+        <FinanceThead />
+
         <tbody className={style.tbody}>
           {sortTickers.map((ticker) => (
             <FinanceItem ticker={ticker} key={uuidv4()} />

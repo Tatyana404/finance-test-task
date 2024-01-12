@@ -2,12 +2,16 @@
   border-collapse: collapse;
 }
 
+.thead {
+  background: lightblue;
+}
+
 .tbody {
   background: #ffffff;
 }
 
-.tr > td {
-  border-bottom: 2px solid #e8eaed;
+.tr > td,
+.tr > th {
   padding: 15px;
 }
 
